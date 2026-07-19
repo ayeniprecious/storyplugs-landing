@@ -3,10 +3,8 @@ import {
   BookmarkPlus,
   Flame,
   Heart,
-  Lock,
   MessageCircle,
   Quote,
-  Sparkles,
   Sun,
 } from "lucide-react";
 
@@ -18,14 +16,12 @@ const FEATURES = [
   {
     icon: Sun,
     title: "A story every day",
-    description:
-      "One real, true-to-life story a day — no doomscrolling, just five honest minutes.",
+    description: "No doomscrolling, just five honest minutes.",
   },
   {
     icon: Flame,
     title: "Build a streak",
-    description:
-      "Read daily and watch your streak grow. Miss a day? Premium gives you streak freezes.",
+    description: "Read daily and watch your streak grow.",
   },
   {
     icon: Quote,
@@ -49,7 +45,7 @@ const FEATURES = [
     icon: Heart,
     title: "Mood-matched picks",
     description:
-      "Tell us how you're feeling and get a set of stories picked to match — Premium.",
+      "Tell us how you're feeling and get a set of stories picked to match.",
   },
 ];
 
@@ -62,17 +58,6 @@ const CATEGORIES = [
   "Community",
   "Children",
   "Everyday Heroes",
-];
-
-const PREMIUM_FEATURES = [
-  "Reader Mode — auto-scroll, dedicated theme, font controls",
-  "Full archive access to every story ever published",
-  "Two streak freezes a month to protect a missed day",
-  "A private journal to write your own reflections",
-  "Offline downloads for reading without a signal",
-  "Reply to other readers in the comments",
-  "Mood-matched picks tuned to how you're feeling",
-  "Year in Reflection — a shareable recap of your reading year",
 ];
 
 export default function Home() {
@@ -101,9 +86,8 @@ export default function Home() {
             <span className="text-brand">every day.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-muted">
-            StoryPlugs delivers a real, true-to-life story every day —
-            kindness, hope, forgiveness, and the quiet moments that remind
-            you people are good.
+            A short story every day — kindness, hope, forgiveness, and the
+            quiet moments that remind you people are good.
           </p>
           <div id="download" className="mt-10 flex justify-center">
             <StoreBadges />
@@ -153,39 +137,6 @@ export default function Home() {
                   {category}
                 </span>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Premium */}
-        <section className="mx-auto max-w-6xl px-6 py-20">
-          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-            <div>
-              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-brand/15 text-brand">
-                <Sparkles size={22} />
-              </div>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-                Go further with Premium
-              </h2>
-              <p className="mt-4 text-muted">
-                Everything in StoryPlugs is free to start. Premium unlocks
-                the tools for readers who want to make it a real habit —
-                including Year in Reflection, a Wrapped-style recap of your
-                reading year that's genuinely worth sharing.
-              </p>
-            </div>
-            <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
-              <ul className="space-y-4">
-                {PREMIUM_FEATURES.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3 text-sm">
-                    <Lock
-                      size={16}
-                      className="mt-0.5 shrink-0 text-brand"
-                    />
-                    <span className="text-foreground/90">{feature}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </section>

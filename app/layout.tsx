@@ -14,11 +14,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "StoryPlugs — A little kindness, every day",
   description:
-    "StoryPlugs delivers a real, true-to-life story every day — kindness, hope, forgiveness, and the quiet moments that remind you people are good. Build a reading streak, save your favorites, and reflect on what matters.",
+    "StoryPlugs delivers a short story every day — kindness, hope, forgiveness, and the quiet moments that remind you people are good.",
   openGraph: {
     title: "StoryPlugs — A little kindness, every day",
     description:
-      "A real, true-to-life story every day. Build a reading streak, save your favorites, and reflect on what matters.",
+      "A short story every day, about kindness, hope, and forgiveness.",
     url: siteUrl,
     siteName: "StoryPlugs",
     images: ["/icon.png"],
