@@ -3,7 +3,7 @@
 // terms_of_service), which the mobile app's in-app Privacy/Terms screens
 // read directly. Keep both in sync by editing here first.
 
-export const LEGAL_UPDATED = "July 15, 2026";
+export const LEGAL_UPDATED = "July 26, 2026";
 
 export interface LegalSection {
   heading: string;
@@ -20,8 +20,8 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
   {
     heading: "Information We Collect",
     body: [
-      "Account information: your email address, display name, and avatar, collected when you sign up.",
-      "Content you create: comments and replies you post, journal entries you write (Premium), folders you create, and stories you save or favorite.",
+      "Account information: your email address and display name, collected when you sign up.",
+      "Content you create: journal entries you write (Premium), folders you create, and stories you save or favorite.",
       "Usage information: which stories you read or complete, your reading streak and history, your reading progress, and your notification preferences.",
       "Device information: a push notification token, if you enable notifications, used only to deliver notifications to your device.",
       "Subscription information: whether you have an active Premium subscription and its status. Payment is handled entirely by the Apple App Store or Google Play — we never see or store your card number or other payment details.",
@@ -30,10 +30,10 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
   {
     heading: "How We Use Your Information",
     body: [
-      "To provide the core app experience: showing you stories, tracking your streak, saving your folders and journal, and powering comments.",
+      "To provide the core app experience: showing you stories, tracking your streak, and saving your folders and journal.",
       "To send push notifications you've opted into, such as new story alerts.",
       "To determine your Premium entitlement so subscriber-only features unlock correctly.",
-      "To moderate community content and enforce our Terms of Service.",
+      "To enforce our Terms of Service.",
     ],
   },
   {
@@ -54,9 +54,8 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
   {
     heading: "Your Choices",
     body: [
-      "You can hide your identity on new comments, showing \"Anonymous\" instead of your name and photo, from the Privacy screen in the app.",
-      "You can edit or delete your journal entries, remove comments you've posted, and manage your saved folders at any time.",
-      "You can delete your account entirely from Profile → Delete Account. This permanently removes your profile, comments, journal, folders, and all associated data, and cannot be undone.",
+      "You can edit or delete your journal entries and manage your saved folders at any time.",
+      "You can delete your account entirely from Profile → Delete Account. This permanently removes your profile, journal, folders, and all associated data, and cannot be undone.",
     ],
   },
   {
