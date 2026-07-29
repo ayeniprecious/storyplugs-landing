@@ -6,7 +6,7 @@ import { CheckCircle2, MailCheck, XCircle } from "lucide-react";
 
 import { Header } from "../components/header";
 import { Footer } from "../components/footer";
-import { supabase } from "../lib/supabase";
+import { getSupabase } from "../lib/supabase";
 
 type Status = "idle" | "verifying" | "success" | "error";
 
@@ -23,17 +23,22 @@ export function VerifyAccountClient() {
   async function handleVerify() {
     if (!tokenHash || !type) return;
     setStatus("verifying");
-    const { error } = await supabase.auth.verifyOtp({
-      token_hash: tokenHash,
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      type: type as any,
-    });
-    if (error) {
-      setErrorMessage(error.message);
+    try {
+      const { error } = await getSupabase().auth.verifyOtp({
+        token_hash: tokenHash,
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        type: type as any,
+      });
+      if (error) {
+        setErrorMessage(error.message);
+        setStatus("error");
+        return;
+      }
+      setStatus("success");
+    } catch (err) {
+      setErrorMessage(err instanceof Error ? err.message : "Something went wrong.");
       setStatus("error");
-      return;
     }
-    setStatus("success");
   }
 
   return (
