@@ -22,7 +22,7 @@ export function Footer() {
           <Link href="/terms" className="hover:text-foreground transition-colors">
             Terms of Service
           </Link>
-          <a href="mailto:hello@storyplugs.com" className="hover:text-foreground transition-colors">
+          <a href="mailto:support@storyplugs.com" className="hover:text-foreground transition-colors">
             Contact
           </a>
         </div>

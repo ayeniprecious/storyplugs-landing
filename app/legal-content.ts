@@ -85,7 +85,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
   {
     heading: "Contact Us",
     body: [
-      "Questions about this policy? Email us at hello@storyplugs.com.",
+      "Questions about this policy? Email us at support@storyplugs.com.",
     ],
   },
 ];
@@ -152,7 +152,7 @@ export const TERMS_SECTIONS: LegalSection[] = [
   {
     heading: "Contact Us",
     body: [
-      "Questions about these Terms? Email us at hello@storyplugs.com.",
+      "Questions about these Terms? Email us at support@storyplugs.com.",
     ],
   },
 ];
